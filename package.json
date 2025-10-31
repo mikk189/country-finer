@@ -1,0 +1,19 @@
+{
+  "name": "country-finer",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "start": "parcel index.html --open",
+    "build": "parcel build index.html --public-url ./"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "@pnotify/core": "^5.2.0",
+    "handlebars": "^4.7.8",
+    "lodash.debounce": "^4.0.8",
+    "parcel": "^2.16.0"
+  }
+}

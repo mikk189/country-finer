@@ -1,0 +1,23 @@
+body {
+  padding: 20px;
+  font-family: Arial, sans-serif;
+}
+
+#result {
+  margin-top: 20px;
+}
+
+img {
+  margin-top: 10px;
+  display: block;
+}
+
+ul {
+  padding: 0;
+  list-style: none;
+}
+
+li {
+  padding: 5px 0;
+}
+/*# sourceMappingURL=country-finer.c92073ef.css.map */

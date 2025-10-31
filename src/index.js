@@ -3,8 +3,29 @@ import { alert, info } from '@pnotify/core';
 import '@pnotify/core/dist/PNotify.css';
 import '@pnotify/core/dist/BrightTheme.css';
 import fetchCountries from './fetchCountries.js';
-import countryTemplate from './templates/country.hbs';
-import countryListTemplate from './templates/countryList.hbs';
+import Handlebars from 'handlebars';
+
+
+const countryTemplateSource = `
+<h2>{{name}}</h2>
+<p>Столиця: {{capital}}</p>
+<p>Населення: {{population}}</p>
+<p>Мови: {{#each languages}}{{name}} {{/each}}</p>
+<img src="{{flag}}" alt="{{name}}" width="200"/>
+`;
+
+const countryTemplate = Handlebars.compile(countryTemplateSource);
+
+const countryListSource = `
+<ul>
+{{#each countries}}
+  <li>{{name}}</li>
+{{/each}}
+</ul>
+`;
+
+const countryListTemplate = Handlebars.compile(countryListSource);
+
 
 const input = document.querySelector('#search-box');
 const resultContainer = document.querySelector('#result');
